@@ -1,0 +1,15 @@
+RewriteEngine On
+Options -Indexes
+
+RewriteRule ^post/create$ _page/create_posts.php [L]
+RewriteRule ^post/([0-9]+)$ _page/view_posts.php?post_id=$1 [L]
+RewriteRule ^post/edit/([0-9]+)$ _page/edit_posts.php?post_id=$1 [L]
+RewriteRule ^post/reply/([0-9]+)$ _page/edit_reply.php?reply_id=$1 [L]
+
+RewriteRule ^i$ index.php [L]
+RewriteRule ^login$ _page/login.php [L]
+RewriteRule ^register$ _page/register.php [L]
+
+RewriteRule ^create_post$ _page/create_posts.php [L]
+RewriteRule ^profile$ _page/profile.php [L]
+RewriteRule ^logout$ actions/logout.php [L]
